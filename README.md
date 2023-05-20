@@ -1,3 +1,7 @@
+npm install styled-components@5.3.10
+
+npm install @emotion/react @emotion/styled
+
 # React homework template
 
 Этот проект был создан при помощи
