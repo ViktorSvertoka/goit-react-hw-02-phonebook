@@ -1,6 +1,10 @@
 npm install styled-components@5.3.10
 
+`import styled from 'styled-components';`
+
 npm install @emotion/react @emotion/styled
+
+`import styled from '@emotion/styled'`
 
 # React homework template
 
