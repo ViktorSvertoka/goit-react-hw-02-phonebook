@@ -1,5 +1,7 @@
 npm install styled-components@5.3.10
 
+npm install styled-components@^5.0.0
+
 `import styled from 'styled-components';`
 
 npm install @emotion/react @emotion/styled
