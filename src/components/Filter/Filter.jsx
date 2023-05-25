@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Div, Label, Input } from './Filter.styled';
 
 // Компонент фильтрации контактов
-export default function Filter({ value, onChangeFilter }) {
+function Filter({ value, onChangeFilter }) {
   return (
     <Div>
       <Label>
@@ -12,3 +13,10 @@ export default function Filter({ value, onChangeFilter }) {
     </Div>
   );
 }
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChangeFilter: PropTypes.func.isRequired,
+};
+
+export default Filter;
