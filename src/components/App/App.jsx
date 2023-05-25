@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
+import { Container, Title, SubTitle, Wrapper } from './App.styled';
 import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
@@ -59,17 +60,17 @@ class App extends Component {
     const { filter } = this.state;
 
     return (
-      <div>
-        <h1>Phonebook</h1>
+      <Container>
+        <Title>Phonebook</Title>
 
         <ContactForm onSubmit={this.addContact} />
 
-        <h2>Contacts</h2>
+        <SubTitle>Contacts</SubTitle>
         {this.state.contacts.length > 0 ? (
           // Фильтр для отображения контактов
           <Filter value={filter} onChangeFilter={this.changeFilter} />
         ) : (
-          'Your phonebook is empty. Add first contact!'
+          <Wrapper>Your phonebook is empty. Add first contact!</Wrapper>
         )}
         {this.state.contacts.length > 0 && (
           // Список контактов
@@ -78,7 +79,7 @@ class App extends Component {
             onRemoveContact={this.removeContact}
           />
         )}
-      </div>
+      </Container>
     );
   }
 }
