@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { List, Item, Button } from './ContactList.styled';
 
 // Компонент списка контактов
@@ -21,5 +22,10 @@ const ContactList = ({ contacts, onRemoveContact }) => (
     ))}
   </List>
 );
+
+ContactList.propTypes = {
+  contacts: PropTypes.object.isRequired,
+  onRemoveContact: PropTypes.func.isRequired,
+};
 
 export default ContactList;
